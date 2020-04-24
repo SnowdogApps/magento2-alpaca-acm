@@ -1,0 +1,16 @@
+{
+  "name": "snowdog/module-alpaca-acm",
+  "description": "Module which adds Alpaca customizations for ACM module",
+  "type": "magento2-module",
+  "require": {
+    "blackbird/contentmanager": "*"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Snowdog\\Acm\\": ""
+    }
+  }
+}
