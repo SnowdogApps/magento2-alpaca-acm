@@ -1,6 +1,7 @@
 {
   "name": "snowdog/module-alpaca-acm",
   "description": "Module which adds Alpaca customizations for ACM module",
+  "license": "MIT",
   "type": "magento2-module",
   "require": {
     "blackbird/contentmanager": "*"
