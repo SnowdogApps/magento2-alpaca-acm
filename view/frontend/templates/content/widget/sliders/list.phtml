@@ -1,0 +1,66 @@
+<?php /** @var \Blackbird\ContentManager\Block\Content\Widget\ContentList $block */ ?>
+<?php
+    $collection = $block->getCollection();
+    $link = $block->getLink();
+?>
+<div class="block widget contenttype-listing contents-grid grid">
+    <?php if (!empty($block->getTitle())) : ?>
+        <div class="block-title">
+            <strong><?= $block->getTitle() ?></strong>
+        </div>
+    <?php endif; ?>
+    <div class="block-content">
+        <?php if ($collection->count()) : ?>
+            <?php if ($block->hasPagerTop()) : ?>
+                <div class="toolbar-bottom">
+                    <div class="toolbar top">
+                        <?= $block->getPagerHtml(); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+            <div class="contents-items widget-content-grid">
+                <?php foreach ($collection as $content) : ?>
+                    <div class="content-item">
+                        <?php // Has Link Top ?>
+                        <?php if ($block->hasLinkTop()) : ?>
+                            <a class="contenttype-listing-readmore" href="<?= $content->getLinkUrl(); ?>">
+                                <?= __($link['label']); ?>
+                            </a>
+                        <?php endif; ?>
+
+                        <?php if (count($block->getAttributeToShow()) == 0) : ?>
+                            <?= $content->render('title', ['has_link' => true]); ?>
+                        <?php else: ?>
+                            <?php foreach ($block->getAttributeToShow() as $attribute) : ?>
+                                <?= $content->render($attribute['attribute'], $attribute['params']); ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+
+                        <?php // Has Link Bottom ?>
+                        <?php if ($block->hasLinkBottom()) : ?>
+                            <a class="contenttype-listing-readmore" href="<?= $content->getLinkUrl(); ?>">
+                                <?= __($link['label']); ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <div style="clear: both"></div>
+
+            <?php if ($block->hasPagerBottom()) : ?>
+                <div class="toolbar-bottom">
+                    <div class="toolbar bottom">
+                        <?= $block->getPagerHtml(); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+        <?php else: ?>
+            <div class="message info empty">
+                <span><?= __("We can't find contents matching the selection.") ?></span>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>
