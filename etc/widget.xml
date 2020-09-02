@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="content_manager_content_list">
+        <parameters>
+            <parameter name="template">
+                <options>
+                    <option name="slider" value="content/widget/sliders/list.phtml">
+                        <label translate="true">Slider Content List Template</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
