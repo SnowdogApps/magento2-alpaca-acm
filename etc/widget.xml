@@ -4,7 +4,7 @@
         <parameters>
             <parameter name="template" xsi:type="select">
                 <options>
-                    <option name="slider" value="content/widget/sliders/list.phtml">
+                    <option name="slider" value="Snowdog_Acm::content/widget/sliders/list.phtml">
                         <label translate="true">Slider Content List Template</label>
                     </option>
                 </options>
