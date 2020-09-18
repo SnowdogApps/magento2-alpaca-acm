@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Added
+- Content manager content list widget slider template (#65842)
 ### Changed
 ### Fixed
 ### Removed
