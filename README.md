@@ -1,3 +1,8 @@
+# No longer maintained
+Check Alpaca Docs for more information: https://magento2-alpaca-docs.vercel.app/guide/migration-guide.html#snowdog-acm-module
+
+---
+
 # Snowdog Alpaca ACM
 
 ## Extension purposes
